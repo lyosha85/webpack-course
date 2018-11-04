@@ -1,1 +1,1 @@
-alert('hot');
+require("./main.css")
