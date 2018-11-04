@@ -1,6 +1,6 @@
 require("./main.css");
 require("./index.html");
 
-const f = () => {
-  console.log('hello from the future');
+const f = async () => {
+  await console.log('hello from the future');
 }
