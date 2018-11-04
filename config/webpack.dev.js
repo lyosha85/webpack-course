@@ -16,6 +16,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // css loaders
       {
         test: /\.css$/,
         use:[
@@ -27,6 +28,7 @@ module.exports = {
           }
         ]
       },
+      // html loaders
       {
         test: /\.html$/,
         use:[
@@ -40,11 +42,27 @@ module.exports = {
             loader: "extract-loader"
           },
           {
-            loader: "html-loader"
+            loader: "html-loader",
+            options: {
+              attrs: ["img:src"]
+            }
           }
 
         ]
+      },
+      // image loaders
+      {
+        test: /\.(jpg|gif|png)$/,
+        use:[
+          {
+            loader: "file-loader",
+            options: {
+              name: "images/[name]-[hash:8].[ext]"
+            }
+          }
+        ]
       }
+
     ]
   }
 }
