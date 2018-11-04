@@ -3,12 +3,25 @@ body {
   background-color: #444;
 }
 
-h1{
+.profile {
+  display: flex;
   height: 100vh;
-  color: salmon;
   display: flex;
   align-items:center;
   justify-content:center;
+  flex-flow: column;
+
+}
+
+img{
+  border-radius: 100%;
+  width: 250px;
+  box-shadow: 0 0 20px black;
+
+}
+
+h1{
+  color: salmon;
   font-size: 4em;
   font-family: sans-serif;
   text-shadow: 0 0 20px black;
